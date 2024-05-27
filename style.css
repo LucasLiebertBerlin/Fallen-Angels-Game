@@ -1,0 +1,373 @@
+body {
+    /* height: 100vh; */
+    margin: 0;
+    font-family: fantasy, monospace;
+    color: black;
+    /* display: flex; */
+    /* flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+    background-color: black;
+    background-image: url('img/game_background_3/layers/battleground.png');
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.buttons {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 700px;
+    bottom: 130px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+canvas {
+    background-color: black;
+    display: block;
+}
+
+.canvas-wrapper {
+    /* border: 5px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.start-screen {
+    position: absolute;
+    z-index: 900;
+    width: 720px;
+    height: 480px;
+    object-fit: fill;
+}
+
+.startscreen-img {
+    object-fit: cover;
+}
+
+.start-button {
+    border: 3px solid black;
+    padding: 5px;
+    border-radius: 10%;
+    cursor: pointer;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+}
+
+.restart-button {
+    border: 3px solid black;
+    padding: 5px;
+    border-radius: 10%;
+    cursor: pointer;
+    position: absolute;
+    top: 66%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+}
+
+.keyboard-button {
+    margin: 0;
+    height: 50px;
+    width: 50px;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.keyboard-button:hover path {
+    fill: red;
+}
+
+.back-button {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top: 75px;
+    left: 95%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    cursor: pointer;
+}
+
+.back-button:hover path {
+    fill: red;
+}
+
+.restart-button:hover {
+    position: absolute;
+    border: 3px solid black;
+    background-color: red;
+    padding: 5px;
+    border-radius: 10%;
+}
+
+.start-button:hover {
+    position: absolute;
+    border: 3px solid red;
+    padding: 5px;
+    border-radius: 10%;
+}
+
+.fullscreen-button {
+    margin: 0;
+    height: 40px;
+    width: 40px;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.mute-button {
+    margin: 0;
+    height: 60px;
+    width: 60px;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.mute-button:hover {
+    fill: red;
+}
+
+.fullscreen-button:hover path {
+    fill: red;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.white-svg path {
+    fill: #ffffff;
+}
+
+.keyboard-assignment {
+    z-index: 1000;
+    background-image: url('img/game_background_4/layers/battleground.png');
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.key-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    font-size: 30px;
+}
+
+.key-header {
+    width: 150px;
+}
+
+.m-left-20 {
+    margin-left: 20px;
+}
+
+.m-right-20 {
+    margin-right: 20px;
+}
+
+.key {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    margin-left: 10px;
+    border: 3px solid black;
+    border-radius: 10px;
+    height: 50px;
+    width: 50px;
+}
+
+.game-description {
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+.screen-rotation {
+    background-image: url('img/game_background_4/layers/battleground.png');
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rotation-svg {
+    height: 300px;
+    width: 300px;
+}
+
+.mobile-move-buttons {
+    position: absolute;
+    width: 600px;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    left: 50%;
+    bottom: 125px;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+}
+
+.mobile-move-button {
+    height: 50px;
+    width: 50px;
+}
+
+.mobile-move-button:hover {
+    fill: red;
+}
+
+/* smartphone */
+@media only screen and (max-width: 960px) {
+    .mobile-move-buttons {
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 932px) {
+    body {
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+    }
+
+    .buttons {
+        width: 600px;
+        justify-content: center;
+        bottom: auto;
+        top: 40px;
+        right: 40px;
+    }
+
+    canvas {
+        width: 100vw;
+        height: 100vh
+    }
+
+    .start-screen {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .startscreen-img {
+        object-fit: cover;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .winning-screen {
+
+        height: 100vh;
+        width: 100vw;
+        position: absolute;
+    }
+
+    .end-screen {
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+    }
+
+    .fullscreen-button {
+        display: none;
+    }
+
+    .title {
+        display: none;
+    }
+
+    .mobile-move-buttons {
+        bottom: 0px;
+        width: 600px;
+    }
+
+}
+
+@media only screen and (max-height: 903px) {
+
+    .buttons {
+        bottom: 0;
+    }
+
+    .mobile-move-buttons {
+        bottom: 0;
+    }
+}
+
+@media only screen and (max-height: 648px) {
+
+    .buttons {
+        bottom: 50px;
+    }
+
+    .mobile-move-buttons {
+        bottom: 50px;
+    }
+}
+
+@media only screen and (max-height: 628px) {
+
+    .buttons {
+        bottom: 30px;
+    }
+
+    .mobile-move-buttons {
+        bottom: 30px;
+    }
+}
+
+@media only screen and (max-height: 618px) {
+
+    .buttons {
+        bottom: 25px;
+    }
+
+    .mobile-move-buttons {
+        bottom: 25px;
+    }
+}
+
+@media only screen and (max-height: 500px) {
+    .buttons {
+        bottom: 10px;
+    }
+
+    .mobile-move-buttons {
+        bottom: 10px;
+    }
+}
+
+@media only screen and (max-height: 480px) {
+    canvas {
+        height: 100vh;
+    }
+
+    .title {
+        display: none;
+    }
+}
